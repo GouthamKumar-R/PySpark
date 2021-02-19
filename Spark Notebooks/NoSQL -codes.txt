@@ -1,0 +1,259 @@
+Q1. Create database praxis
+
+use praxis
+
+Q2 Create collection restaurant
+
+db.createCollection("restaurant")
+
+Q3. Insert below json in collection restaurant and then add at least 4 more in same collection
+
+db.restaurant.insertMany([
+{
+"name": "ITC",
+  "restaurant_id": "20075",
+  "address": {
+     "building": "10",
+     "coord": [ -74.85, 50.84 ],
+     "street": "ITC Ave",
+     "zipcode": "560076"
+  },
+  "borough": "croydon",
+  "cuisine": "Bakery",
+  "grades": [
+     { "date": { "$date": 1393804800000 }, "grade": "A", "score": 4 },
+     { "date": { "$date": 1378857600000 }, "grade": "B", "score": 5 },
+     { "date": { "$date": 1358985600000 }, "grade": "A", "score": 10 },
+     { "date": { "$date": 1322006400000 }, "grade": "C", "score": 9 },
+     { "date": { "$date": 1299715200000 }, "grade": "B", "score": 14 }
+  ]
+  
+},
+
+{
+"name": "Taj Hotels",
+  "restaurant_id": "20076",
+  "address": {
+     "building": "11",
+     "coord": [ -23.877, 23.447 ],
+     "street": "Taj street",
+     "zipcode": "560077"
+  },
+  "borough": "Ealing",
+  "cuisine": "Hyderabadi",
+  "grades": [
+     { "date": { "$date": 1393804800000 }, "grade": "D", "score": 4 },
+     { "date": { "$date": 1378857600000 }, "grade": "A", "score": 6 },
+     { "date": { "$date": 1358985600000 }, "grade": "C", "score": 11 },
+     { "date": { "$date": 1322006400000 }, "grade": "A", "score": 9 },
+     { "date": { "$date": 1299715200000 }, "grade": "B", "score": 4 }
+  ]
+  
+},
+
+{
+"name": "Le Meridan",
+  "restaurant_id": "12345",
+  "address": {
+     "building": "11",
+     "coord": [ -23.855, 23.447 ],
+     "street": "Avanashi Road",
+     "zipcode": "560077"
+  },
+  "borough": "croydon",
+  "cuisine": "American",
+  "grades": [
+     { "date": { "$date": 1393804800000 }, "grade": "B", "score": 8 },
+     { "date": { "$date": 1378857600000 }, "grade": "A", "score": 9 },
+     { "date": { "$date": 1358985600000 }, "grade": "C", "score": 11 },
+     { "date": { "$date": 1322006400000 }, "grade": "C", "score": 10 },
+     { "date": { "$date": 1299715200000 }, "grade": "A", "score": 12 }
+  ]
+  
+},
+
+{
+"name": "The Leela Palace",
+  "restaurant_id": "20077",
+  "address": {
+     "building": "11",
+     "coord": [ -36.77, 23.478 ],
+     "street": "Leela Road",
+     "zipcode": "560077"
+  },
+  "borough": "Ealing",
+  "cuisine": "Hyderabadi",
+  "grades": [
+     { "date": { "$date": 1393804800000 }, "grade": "D", "score": 8 },
+     { "date": { "$date": 1378857600000 }, "grade": "A", "score": 15 },
+     { "date": { "$date": 1358985600000 }, "grade": "A", "score": 10 },
+     { "date": { "$date": 1322006400000 }, "grade": "A", "score": 12 },
+     { "date": { "$date": 1299715200000 }, "grade": "A", "score": 15 }
+  ]
+  
+},
+
+{
+"name": "The Oberoi",
+  "restaurant_id": "20078",
+  "address": {
+     "building": "11",
+     "coord": [ -58.77, 22.55 ],
+     "street": "Don pettai",
+     "zipcode": "560077"
+  },
+  "borough": "Ealing",
+  "cuisine": "Hyderabadi",
+  "grades": [
+     { "date": { "$date": 1393804800000 }, "grade": "D", "score": 8 },
+     { "date": { "$date": 1378857600000 }, "grade": "A", "score": 8 },
+     { "date": { "$date": 1358985600000 }, "grade": "C", "score": 7 },
+     { "date": { "$date": 1322006400000 }, "grade": "A", "score": 5 },
+     { "date": { "$date": 1299715200000 }, "grade": "B", "score": 6 }
+  ]
+  
+},
+
+{
+"name": "ITC Gardenia",
+  "restaurant_id": "20079",
+  "address": {
+     "building": "11",
+     "coord": [ -23.877, 23.447 ],
+     "street": "ITC Ave",
+     "zipcode": "560077"
+  },
+  "borough": "Ealing",
+  "cuisine": "Contiental",
+  "grades": [
+     { "date": { "$date": 1393804800000 }, "grade": "D", "score": 8 },
+     { "date": { "$date": 1378857600000 }, "grade": "A", "score": 7 },
+     { "date": { "$date": 1358985600000 }, "grade": "C", "score": 10 },
+     { "date": { "$date": 1322006400000 }, "grade": "A", "score": 6 },
+     { "date": { "$date": 1299715200000 }, "grade": "B", "score": 8 }
+  ]
+  
+},
+
+{
+"name": "Taj Lake Palace",
+  "restaurant_id": "20080",
+  "address": {
+     "building": "11",
+     "coord": [ -75.66, 23.447 ],
+     "street": "Taj street",
+     "zipcode": "560077"
+  },
+  "borough": "croydon",
+  "cuisine": "Hyderabadi",
+  "grades": [
+     { "date": { "$date": 1393804800000 }, "grade": "B", "score": 8 },
+     { "date": { "$date": 1378857600000 }, "grade": "A", "score": 9 },
+     { "date": { "$date": 1358985600000 }, "grade": "B", "score": 10 },
+     { "date": { "$date": 1322006400000 }, "grade": "A", "score": 11 },
+     { "date": { "$date": 1299715200000 }, "grade": "A", "score": 12 }
+  ]
+  
+},
+
+{
+"name": "Le Grand",
+  "restaurant_id": "20081",
+  "address": {
+     "building": "11",
+     "coord": [ -69.69, 69.69 ],
+     "street": "",
+     "zipcode": "560077"
+  },
+  "borough": "Ealing",
+  "cuisine": "Hyderabadi",
+  "grades": [
+     { "date": { "$date": 1393804800000 }, "grade": "D", "score": 8 },
+     { "date": { "$date": 1378857600000 }, "grade": "A", "score": 7 },
+     { "date": { "$date": 1358985600000 }, "grade": "C", "score": 7 },
+     { "date": { "$date": 1322006400000 }, "grade": "A", "score": 6 },
+     { "date": { "$date": 1299715200000 }, "grade": "B", "score": 5 }
+  ]
+  
+}
+ 
+])
+
+
+Q4. Write a MongoDB query to display all the documents in the collection restaurant
+
+db.restaurant.find().pretty()
+
+Q5. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine for all the documents in the collection restaurant.
+
+db.restaurant.find({},{"restaurant_id":1,"name":1,"borough":1,"cuisine":1}).pretty()
+
+
+Q6. Write a MongoDB query to display the fields restaurant_id, name, borough and cuisine, but exclude the field “_id” for all the documents in the collection restaurant.
+
+db.restaurant.find({},{"_id":0,"restaurant_id":1,"name":1,"borough":1,"cuisine":1}).pretty()
+
+Q7. Write a MongoDB query to display the fields restaurant_id, name, borough, zip code and grade, but exclude the field _id for all the documents in the collection restaurant.
+
+db.restaurant.find({},{"_id":0,"restaurant_id":1,"name":1,"borough":1,"address.zipcode":1, "grades":1}).pretty()
+
+
+Q8. Write a MongoDB query to display all the restaurant which is in the borough croydon.
+
+db.restaurant.find({"borough":"croydon"}).pretty()
+
+Q9. Write a MongoDB query to display the first 5 restaurant which is in the borough Ealing.
+
+db.restaurant.find({"borough":"Ealing"}).limit(5).pretty()
+
+
+Q10. Write a MongoDB query to display the next 1 restaurants after skipping first 2 which are in the borough Eagling.
+
+db.restaurant.find({"borough":"Ealing"}).skip(2).limit(1).pretty()
+
+Q11. Write a MongoDB query to find the restaurants who achieved a score more than 9.
+
+db.restaurant.find({"grades.score":{$gt:9}}).pretty()
+
+Q12. Write a MongoDB query to find the restaurants that achieved a score, more than 4 but less than 10.
+
+db.restaurant.find({"grades": {$elemMatch:{"score": {$gt:4, $lt:10}}}}).pretty()
+
+
+Q13. Write a MongoDB query to find the restaurants which do not prepare any cuisine of 'American ' and achieved a grade point 'A' not belongs to the borough croydon. The document must be displayed according to the cuisine in descending order.
+
+db.restaurant.find({"cuisine": {$ne:"American"},"grades.grade": "A","borough": {$ne: "Brooklyn"}}).sort({"cuisine":-1}).pretty()
+
+Q14. Update document zipcode of all documents to 560070
+
+db.restaurant.update({},{$set:{"address.zipcode":5670070}},{multi:true})
+
+Q15.Update document zipcode to 987456 of document where borough is Croydon.
+
+db.restaurant.update({"borough":"croydon"},{$set:{"address.zipcode":987456}},{multi:true})
+
+Q16. Remove document where restaurant id is ‘12345’
+
+db.restaurant.remove({"restaurant_id":12345})
+
+
+Q17. Remove sub document grades from document where zipcode is 987456.
+
+db.restaurant.update({"address.zipcode":987456}, {$unset: {"grades": ""}}, {multi:true})
+
+db.restaurant.find({"address.zipcode":987456}).pretty()
+
+
+Q18. Create index on collection restaurant on column restaurant_id enforcing uniqueness
+
+db.restaurant.ensureIndex({"restaurant_id":1},{"unique":true})
+
+
+Q19. Create compound index on any 2 keys of collection restaurants.
+
+db.restaurant.ensureIndex({"cuisine":1, "name":1},{"unique":true})
+
+
+Q20. Drop database praxis.
+
+db.dropDatabse()
